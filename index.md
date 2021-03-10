@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Mike Robinson Learning Blog
 
 You can use the [editor on GitHub](https://github.com/cruzzoe/cruzzoe-cruzzoe.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
