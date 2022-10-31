@@ -5,4 +5,4 @@
 layout: home
 ---
 
-
+Welcome to Mike Robinson's blog. Feel free to reach out and connect via [Linkedin](https://www.linkedin.com/in/michaelrobinson5).
