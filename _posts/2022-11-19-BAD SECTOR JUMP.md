@@ -1,3 +1,8 @@
+---
+layout: post
+title: "BAD SECTOR JUMP"
+---
+
 This week my synology nas alerted me to a reallocated sector jump. It went from zero to 32 overnight. 
 
 *“Reallocated sectors are bad sectors on your hard drive that have been moved to another part of the disk”* See [https://harddrivegeek.com/reallocated-sector-count/](https://harddrivegeek.com/reallocated-sector-count/)
