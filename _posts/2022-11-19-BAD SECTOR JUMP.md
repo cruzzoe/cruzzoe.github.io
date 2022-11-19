@@ -10,7 +10,7 @@ This week my synology nas alerted me to a reallocated sector jump. It went from 
 Overall, there is a lack of clarity online about how significant a reallocated sector is for the life of a drive. Some of the reading I did indicates that this is just part of how drives work and as long as 
 - a) the amount of bad sectors is not growing
 - b) Its relatively small then you should be fine. 
-- 
+
 - However, I also came across a lot of opinions online that indicate any bad sectors means the drive is on the way out. I decided to go with caution and replace.
 
 This was accepted without fuss by scan.co.uk as part of an RMA but it drives home the importance of a backup strategy and having planned steps for data restoration.
