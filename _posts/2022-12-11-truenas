@@ -1,0 +1,24 @@
+This week I made the move to migrate from opennas to Truenas Scale.
+
+The move went very smoothly and was much easier than I expected. 
+
+I opted to go for Scale rather than Core as firstly I'd rather be on a Linux derivative than BSD and secondly it seems like Scale is the future of Truenas. 
+
+Selecting vdevs
+Getting my head around zPools, vdevs and the corresponding array types was the most complicated aspect Ed of Truenas. 
+
+My take on this is that a vdev stands for virtual device. Think of it like its own drive. These compartmentalise to create your pool. The fundamental here is if any vdev fails them your whole pool goes down. Redundancy exists inside the vdev not the pool! 
+
+A note here on future proofing. Expanding a vdev is not possible. Instead you can add more vdevs to the pool to increase capacity. Note as mentioned above any vdev dies the whole pool fails! 
+
+This is why I opted to start my array with larger drives to give me more time. 
+
+I'm running 3x8TB drives in a raidz1 array.
+
+Issues with expansion
+Hardware wise there are some constraints to take into account.
+
+- number of sata ports on your motherboard. Remember the OS drive takes one sata.
+- number of physical bays to load in your drives
+- power consumption. My guess is a 20TB drive uses the same power as an 8TB drive. Having 6x4TB drives must use more power that 3x8TB drives. I'd reccomend factoring this into your calculations.
+- cooling. Harddrives dont like being kept under hot temps for sustained periods. I noticed in my case there was a lack of Airflow and so more fans were needed
