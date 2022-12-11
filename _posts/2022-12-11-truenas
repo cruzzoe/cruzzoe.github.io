@@ -1,10 +1,17 @@
 This week I made the move to migrate from opennas to Truenas Scale.
 
-The move went very smoothly and was much easier than I expected. 
+The move went very smoothly and was much easier than expected. 
 
-I opted to go for Scale rather than Core as firstly I'd rather be on a Linux derivative than BSD and secondly it seems like Scale is the future of Truenas. 
+I opted to go for Scale rather than Core as firstly I'd rather be on a Linux derivative than BSD and secondly Scale is the future of Truenas. 
 
-Selecting vdevs
+## Motivation for change
+Everyone raves about zfs, the filesystem that underpins Truenas. 
+This gives access to the snapshot feature. This is super cool as it allows the system to cut a new snapshot at defined /manual periods that can be restored should accidental/malicious deletes occur. 
+The snapshots also flow nicely into Windows showing as different versions for a given file. Finally those snapshots don't require full recreations of the dataset. I.e if I've deleted one file from my datataset, the snapshot only is the size of that one file! This is awesome. 
+
+Redundancy was something I also realised I needed. I've spent a lot of effort on protecting my data and I realised having zero redundancy was too high risk for me. 
+
+## Selecting vdevs
 Getting my head around zPools, vdevs and the corresponding array types was the most complicated aspect Ed of Truenas. 
 
 My take on this is that a vdev stands for virtual device. Think of it like its own drive. These compartmentalise to create your pool. The fundamental here is if any vdev fails them your whole pool goes down. Redundancy exists inside the vdev not the pool! 
@@ -15,10 +22,19 @@ This is why I opted to start my array with larger drives to give me more time.
 
 I'm running 3x8TB drives in a raidz1 array.
 
-Issues with expansion
+## Issues with expansion
 Hardware wise there are some constraints to take into account.
 
 - number of sata ports on your motherboard. Remember the OS drive takes one sata.
 - number of physical bays to load in your drives
 - power consumption. My guess is a 20TB drive uses the same power as an 8TB drive. Having 6x4TB drives must use more power that 3x8TB drives. I'd reccomend factoring this into your calculations.
 - cooling. Harddrives dont like being kept under hot temps for sustained periods. I noticed in my case there was a lack of Airflow and so more fans were needed
+
+## importance of alerting 
+I can't recommend enough the importance of email alerts from truenas. As soon as you start seeing smart errors you should look into changing the faulty drive. 
+Further, truenas needs scrubbing. This is a process often run on monthly intervals to verify the integrity of your data as well as fix. During scrubbing this is often where drives issues are picked up as this is an intensive task. Failing to do data scrubbing is asking for problems. 
+
+## Final thoughts
+I'd whole heartedly reccomend others to try truenas scale. Given that these operations take a reasonable amount of time to get setup I'd reccomend trying to future proof your nas. Finding out you've undersized your capacity and have filled up your nas int he first 6months is frustrating!
+I've attempted to get different drive models/ages in my array. Running a set of drives all of the same age and model type is high risk as the chances are significantly higher of all drives failing at the same time.
+Its still unclear to me whether I should have gone wit raidz2 to increase the redundancy of my vdevs. Overall, I didn't want to spend more on this projects and my truenas will have a backup plus cloud for important data. I guess time will tell!
