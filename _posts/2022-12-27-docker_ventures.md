@@ -35,3 +35,6 @@ There's abuntance of scale compatible images available for TN scale here. I'm no
 
 ## Bonus
 I did try running Ubuntu in a container and accessing via Microsoft remote desktop. I was able to connect but didn't get to explore very far. 
+
+### Future work
+https://github.com/healthchecks/healthchecks this looks like a good candidate to monitor my backup cron jobs & link in with email alerting.
