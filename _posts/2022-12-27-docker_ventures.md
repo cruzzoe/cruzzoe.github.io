@@ -33,4 +33,5 @@ I've avoided running priviledged at all costs so far, but w.r.t docker hub - I h
 ## Tip 8 - If using truenas scale - take a look at TrueCharts
 There's abuntance of scale compatible images available for TN scale here. I'm not overly keen on running too much on my nas, but it's nice to know there are options.
 
-## Bonus - I did try running Ubuntu in a container and accessing via Microsoft remote desktop. I was able to connect but didn't get to explore very far. 
+## Bonus
+I did try running Ubuntu in a container and accessing via Microsoft remote desktop. I was able to connect but didn't get to explore very far. 
