@@ -50,4 +50,5 @@ In total:
 - 1x Toshiba 8TB Nas drive (SMART won't run and Truenas reports drive as failed)
 
 Don't make the mistake of thinking new drives should work because they are new. Remember the bathtube failure curve.
+
 <img src="{{site.baseurl}}/assets/images/bathtub.gif" alt="You can never completely trust a drive, but especially at beginning/EOL">
