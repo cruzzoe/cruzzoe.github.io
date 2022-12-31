@@ -40,3 +40,13 @@ Off-site backups. I never thought I’d get bad sectors the week after I wrote a
 - Can the data be replaced? E.g personal photos. Chances are not.
 - Disruption to BAU activities e.g work/medical. Opportunity costs exist here
 - Financial loss. E.g products you’ve bought that can be rebought (at cost)
+
+## Edit - 31-12-2022
+Since writing this post, I've had a few more drive failures.
+
+In total:
+- 1x Seagate IronWolf 4TB (Bad Sectors from SMART)
+- 1x Toshiba 16TB Nas drive (Failing drive according to synology)
+- 1x Toshiba 8TB Nas drive (SMART won't run and Truenas reports drive as failed)
+
+Don't make the mistake of thinking new drives should work because they are new. Remember the bathtube failure curve.
