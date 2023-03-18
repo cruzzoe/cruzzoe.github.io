@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Success with Syncthing"
+title: "pipe or hyphen"
 ---
 
 Piping from one cmd to another is common place in linux. 
