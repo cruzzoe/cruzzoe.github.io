@@ -9,7 +9,7 @@ Short tip for tracking down the failure on a linux host.
 
 This shows the syslog right up until the moment that the machine got restarted.
 
-##A quick summary:
+## A quick summary:
 
 The sudo journalctl -b -1 -e command is used to view the system logs for the previous boot session on a Linux system. Here's what each part of the command does:
 * journalctl: The command to view system logs on Linux.
